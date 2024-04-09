@@ -1,0 +1,8 @@
+{
+    "HEALTY": "El servicio está saludable",
+
+    "GENERAL_ERROR" : "Hubo un error al procesar la solicitud.",
+    "INVALID_JSON_BODY" : "Hay errores en la información proporcionada de {{.Resource}}.",
+
+    "GENERAL_DB_ERROR" : "Hubo un error al intentar acceder a la base de datos."
+}

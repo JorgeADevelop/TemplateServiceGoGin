@@ -4,6 +4,7 @@ import (
 	"TemplateService/database"
 	"TemplateService/middlewares"
 	"TemplateService/utils"
+	"fmt"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -19,12 +20,11 @@ func main() {
 		panic("Error connecting to database")
 	}
 
-	utils.InitTranslate()
-
 	if os.Getenv("ENV") == "development" {
 		gin.SetMode(gin.DebugMode)
 	} else {
 		gin.SetMode(gin.ReleaseMode)
+		fmt.Printf("Server is running on port %s\n", os.Getenv("PORT"))
 	}
 
 	router := gin.New()

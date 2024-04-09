@@ -1,3 +1,8 @@
 {
-    "HEALTY": "Service is healthy"
+    "HEALTY": "Service is healthy",
+
+    "GENERAL_ERROR" : "there was an error while processing the request.",
+    "INVALID_JSON_BODY" : "there are errors in the {{.Resource}} information provided.",
+
+    "GENERAL_DB_ERROR" : "there was an error while trying to access the database."
 }
