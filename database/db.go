@@ -28,8 +28,6 @@ func Connect() error {
 		return err
 	}
 
-	defer Close()
-
 	BD = db
 	return nil
 }

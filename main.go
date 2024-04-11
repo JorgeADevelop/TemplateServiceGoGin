@@ -3,6 +3,7 @@ package main
 import (
 	"TemplateService/database"
 	"TemplateService/middlewares"
+	"TemplateService/models"
 	"TemplateService/utils"
 	"fmt"
 	"os"
@@ -18,6 +19,12 @@ func main() {
 
 	if err := database.Connect(); err != nil {
 		panic("Error connecting to database")
+	}
+
+	defer database.Close()
+
+	if err := models.Migrate(); err != nil {
+		panic("Error migrating models")
 	}
 
 	if os.Getenv("ENV") == "development" {
